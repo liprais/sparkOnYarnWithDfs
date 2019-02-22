@@ -1,4 +1,4 @@
-package com.splicemachine.test.spark_apdater;
+package com.splicemachine.test.spark_adapter;
 
 import com.splicemachine.derby.impl.SpliceSpark;
 import com.splicemachine.spark.splicemachine.SplicemachineContext;
@@ -33,7 +33,7 @@ public class Main {
                 " -Dsplice.spark.yarn.keytab=" + keytabFilePath;
         String sparkYarnJarsPath = "local:" + platformITHome + "target/dependency/*";
 
-        LogManager.getLogger("org").setLevel(Level.INFO);
+        LogManager.getLogger("org").setLevel(Level.OFF);
         System.setProperty("java.security.krb5.conf", krb5confPath);
 
         String dbUrl = "jdbc:splice://localhost:1527/splicedb;user=splice;password=admin";
